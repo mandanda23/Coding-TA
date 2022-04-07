@@ -1,0 +1,291 @@
+/*--------# General -----------*/
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #444444;
+    background-color: #E5E5E5;
+}
+
+a {
+    text-decoration: none;
+    color: #5cb874;
+}
+
+a:hover {
+    color: #80c792;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: xxx-large;
+}
+
+h2 {
+    font-size: x-large;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo-name {
+    font-family: 'Yatra One';
+    font-size: large;
+    align-items: center;
+}
+
+
+/*-----------------Navbar ---------------------*/
+
+.navbar {
+    background-color: #C4C4C4;
+}
+
+.nav-item {
+    font-size: 18px;
+}
+
+.nav {
+    background-color: #C4C4C480;
+}
+
+#nav a {
+    color: black;
+}
+
+#navbarNav a:hover {
+    color: gainsboro;
+}
+
+.dropdown-menu {
+    background-color: #C4C4C4;
+}
+
+.navbar-toggler {
+    display: flex;
+    flex-direction: column;
+    height: 30px;
+    justify-content: space-between;
+    background-color: #C4C4C450;
+    align-items: center;
+}
+
+.navbar-toggler span {
+    margin: auto;
+}
+
+.navbar-toggler-icon {
+    background-color: black;
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 3px;
+}
+
+
+/*----------sliders -------------*/
+
+#manda .carousel-item {
+    margin-top: 59px;
+}
+
+@media (max-width: 992px) {
+    #manda .carousel-item {
+        margin-top: 48px;
+    }
+}
+
+#manda .carousel-caption {
+    text-align: center;
+    bottom: 150px;
+    background-color: #bdf8a476;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    color: rgb(0, 0, 0);
+}
+
+#manda p {
+    color: rgb(0, 0, 0);
+    font-family: 'Fredoka', sans-serif;
+    font-size: medium;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#manda h1 {
+    margin-top: 150px;
+}
+
+.carousel-inner {
+    background-color: #444444;
+}
+
+#manda .carousel-indicators .active {
+    background-color: black;
+}
+
+@media (max-width: 768px) {
+    #manda h1 {
+        font-size: 20px;
+    }
+    #manda p {
+        font-size: 11px;
+    }
+}
+
+
+/*----------pengertian pura-----------------*/
+
+#cerita p {
+    font-size: 15px;
+}
+
+.rounded {
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    #cerita h2 {
+        font-size: 20px;
+    }
+    #cerita p {
+        font-size: 13px;
+    }
+}
+
+#rdf {
+    text-align: center;
+}
+
+#rdf .rounded {
+    width: 90%;
+    height: auto;
+}
+
+
+/*----------- dada home ----------*/
+
+#tekan .tombol {
+    margin-left: 45%;
+    margin-right: 45%;
+    width: 150px;
+}
+
+@media (max-width: 768px) {
+    #tekan .tombol {
+        margin-left: 43%;
+        margin-right: 45%;
+        width: 150px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    #dada h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    #tekan .tombol {
+        margin-left: 35%;
+        margin-right: 45%;
+        width: 150px;
+        font-size: 9px;
+    }
+}
+
+
+/*----------- about -----------*/
+
+#keterangan.container {
+    size: 50%;
+}
+
+#penjelasan h3 {
+    font-size: 18px;
+}
+
+#penjelasan h4 {
+    font-size: 16px;
+}
+
+#wess.col {
+    margin-left: 10px;
+    height: 230px;
+}
+
+#wes.col {
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 550px;
+    height: 240px;
+}
+
+.col-md-12 {
+    height: 230px;
+    width: 550px;
+    margin-bottom: 3px;
+    margin-left: 7px;
+    margin-top: 3px;
+}
+
+.embed-responsive-item {
+    width: 1270px;
+    height: 450px;
+}
+
+@media (max-width: 1400px) {
+    #maps .embed-responsive-item {
+        width: 1083px;
+    }
+}
+
+@media (max-width: 1200px) {
+    #maps .embed-responsive-item {
+        width: 905px;
+    }
+}
+
+@media (max-width: 992px) {
+    #maps .embed-responsive-item {
+        width: 675px;
+    }
+}
+
+@media (max-width: 768px) {
+    #maps .embed-responsive-item {
+        width: 490px;
+    }
+    #wes img {
+        height: 230px;
+        width: 450px;
+        margin-top: 5px;
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 537px) {
+    #maps .embed-responsive-item {
+        width: fit-content;
+    }
+    #wes img {
+        height: 230px;
+        width: 280px;
+        margin-top: 5px;
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 360px) {
+    #maps .embed-responsive-item {
+        width: fit-content;
+    }
+}
