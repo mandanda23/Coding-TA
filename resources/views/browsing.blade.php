@@ -94,7 +94,7 @@
                         <form action="/browsing" method="GET" id="cari_pura">
                             <div class="row">
                                 <h3>
-                                    Pilih Salah Satu
+                                    Pilih Daerah
                                 </h3>
                                 <div class="input-group mb-3">
                                     <select class="form-select" id="inputGroupSelect01" name="cari_kabupaten">
