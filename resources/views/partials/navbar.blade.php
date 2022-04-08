@@ -27,7 +27,7 @@
             <ul class="dropdown-menu" id="dropdownmenu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="/browsing"><i class='bx bx-globe'></i> Browsing</a></li>
               <li><a class="dropdown-item" href="/searching"><i class='bx bx-search-alt'></i> Searching</a></li>
-              <li><a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSdyHonyTQgrTX9yuY1nKaOpzKnSWuAjKnWYsLLL1OIrh_by_w/viewform"> <i class='bx bxs-file-blank'></i> Questionaire</a></li>
+              <li><a class="dropdown-item" href="https://bit.ly/PuraKahyanganJagat"> <i class='bx bxs-file-blank'></i> Questionaire</a></li>
             </ul>
           </li>
           </ul>

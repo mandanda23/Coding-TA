@@ -38,3 +38,8 @@ Route::get('/browsing', [browsing::class, 'isi']);
 Route::get('/searching', [SearchingController::class, 'index']);
 Route::get('/readmore/{nama_pura}', [readmore::class, 'detail']);
 Route::get('/lihat', [lihat::class, 'lihat']);
+
+Route::get('/browsingKabupaten/{kabupaten}', [browsing::class, 'isiKabupaten']);
+Route::get('/browsingKecamatan/{kecamatan}', [browsing::class, 'isiKecamatan']);
+Route::get('/browsingDesa/{desa}', [browsing::class, 'isiDesa']);
+Route::get('/browsingBanjar/{banjar}', [browsing::class, 'isiBanjar']);

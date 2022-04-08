@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <link href="{{ asset('assets/img/logo1.png')}}" rel="icon">
-    <title> Sirakaja | Browsing</title>
+    <title> Sirakaja | Searching</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('assets/css/drop.css')}}">
     <!-- Boxiocns CDN Link -->
@@ -48,7 +48,7 @@
           <span class="link_name">Questionaire</span>
         </a>
         <ul class="sub-menu blank">
-          <li><a class="link_name" href="https://docs.google.com/forms/d/e/1FAIpQLSdyHonyTQgrTX9yuY1nKaOpzKnSWuAjKnWYsLLL1OIrh_by_w/formResponse">Questionaire</a></li>
+          <li><a class="link_name" href="https://bit.ly/PuraKahyanganJagat">Questionaire</a></li>
         </ul>
       </li>
 

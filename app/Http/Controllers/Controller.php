@@ -22,7 +22,7 @@ class Controller extends BaseController
         RdfNamespace::set('owl', 'http://www.w3.org/2002/07/owl#');
         RdfNamespace::set('pura', 'http://www.semanticweb.org/Bali/PuraKahyanganJagat.owl#');
 
-        $this->sparql = new Client('http://127.0.0.1:3030/purakhayangan/query');
+        $this->sparql = new Client('http://www.lokapaladigital.com:3030/purakhayangan/query');
     }
 
     public function parseData($str)
