@@ -25,7 +25,7 @@ Route::get('/', function () {
 
 
 Route::get('/about', function () {
-    return view('About', [
+    return view('about', [
         "title" => "About",
         "nama" => "acintia udayana",
         "email" => "udayana@gmail.com",
