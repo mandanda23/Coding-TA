@@ -212,7 +212,7 @@ class browsing extends Controller
             'provinsi' => $resultProvinsi,
             'resp' => 1,
             'kabupaten' => $resultPura,
-            'link' => 'detailpura'
+            'link' => 'readmore'
         ];
 
         return view('browsing', [

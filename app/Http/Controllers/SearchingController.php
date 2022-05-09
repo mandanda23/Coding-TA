@@ -14,7 +14,8 @@ class SearchingController extends Controller
         $Banjar = $this->sparql->query('SELECT * WHERE {?Banjar a pura:Banjar}');
         $HariPiodalan = $this->sparql->query('SELECT * WHERE {?HariPiodalan a pura:HariPiodalan}ORDER BY ?HariPiodalan');
         $Warna = $this->sparql->query('SELECT * WHERE {?Warna a pura:Warna}ORDER BY ?Warna');
-
+        $kondisi = $this->sparql->query('SELECT * WHERE {?kondisi a pura:StatusPura}ORDER BY ?kondisi');
+        $pelinggih = $this->sparql->query('SELECT * WHERE {?pelinggih a pura:Pelinggih}ORDER BY ?pelinggih');
 
         $Kabupaten = [];
         foreach ($kabupaten as $item) {
@@ -53,6 +54,19 @@ class SearchingController extends Controller
             ]);
         }
 
+        $resultkondisi = [];
+        foreach ($kondisi as $item) {
+            array_push($resultkondisi, [
+                'kondisi' => $this->parseData($item->kondisi->getUri())
+            ]);
+        }
+        $resultpelinggih = [];
+        foreach ($pelinggih as $item) {
+            array_push($resultpelinggih, [
+                'pelinggih' => $this->parseData($item->pelinggih->getUri())
+            ]);
+        }
+
         $sql=NULL;
 
         if ($request->has('cari_pura') != '') {
@@ -70,17 +84,6 @@ class SearchingController extends Controller
                 $sql = $sql;
             }
 
-            // if ($request->cari_kecamatan != '') {
-            //     if ($i == 0) {
-            //         $sql = $sql . '?pura pura:memilikiKecamatan pura:' . $request->cari_kecamatan;
-            //         $i++;
-            //     } else {
-            //         $sql = $sql . '. ?pura pura:memilikiKecamatan pura:' . $request->cari_kecamatan;
-            //     }
-            // } else {
-            //     $sql = $sql;
-            // }
-
             if ($request->cari_dewa != '') {
                 if ($i == 0) {
                     $sql = $sql . '?pura pura:sebagaiSthana pura:' . $request->cari_dewa;
@@ -92,16 +95,28 @@ class SearchingController extends Controller
                 $sql = $sql;
             }
 
-            // if ($request->cari_banjar != '') {
-            //     if ($i == 0) {
-            //         $sql = $sql . '?pura pura:memilikiBanjar pura:' . $request->cari_banjar;
-            //         $i++;
-            //     } else {
-            //         $sql = $sql . '. ?pura pura:memilikiBanjar pura:' . $request->cari_banjar;
-            //     }
-            // } else {
-            //     $sql = $sql;
-            // }
+            if ($request->cari_pelinggih!= '') {
+                if ($i == 0) {
+                    $sql = $sql . '?pura pura:memilikiPelinggih pura:' . $request->cari_pelinggih;
+                    $i++;
+                } else {
+                    $sql = $sql . '. ?pura pura:memilikiPelinggih pura:' . $request->cari_pelinggih;
+                }
+            } else {
+                $sql = $sql;
+            }
+
+            if ($request->cari_kondisi != '') {
+                if ($i == 0) {
+                    $sql = $sql . '?pura pura:memilikisetatusPura pura:' . $request->cari_kondisi;
+                    $i++;
+                } else {
+                    $sql = $sql . '. ?pura pura:memilikisetatusPura pura:' . $request->cari_kondisi;
+                }
+            } else {
+                $sql = $sql;
+            }
+         
             if ($request->cari_haripiodalan != '') {
                 if ($i == 0) {
                     $sql = $sql . '?pura pura:memilikihariPiodalan pura:' . $request->cari_haripiodalan;
@@ -151,6 +166,8 @@ class SearchingController extends Controller
             'resp' => $resp,
             'jumlahpura' => $jumlahpura,
             'listpura' => $resultpura,
+            'kondisi' => $resultkondisi,
+            'pelinggih' => $resultpelinggih,
             'query' => $sql
         ];
 

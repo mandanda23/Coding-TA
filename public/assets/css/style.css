@@ -3,7 +3,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     color: #444444;
-    background-color: #E5E5E5;
+    background-color: white;
 }
 
 a {
@@ -289,3 +289,12 @@ h6 {
         width: fit-content;
     }
 }
+
+
+/* .card-img-top {
+    transition: 0.5s;
+}
+
+.pura:hover .card-img-top {
+    transform: scale(1.5, 1);
+} */

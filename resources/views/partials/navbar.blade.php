@@ -20,14 +20,17 @@
             <a class="nav-link {{ ($title === 'About') ? 'active' : '' }}" href="/about"><i class='bx bx-info-circle' ></i> about</a>
           </li>
           
+          <li class="nav-item">
+            <a class="nav-link {{ ($title === 'About') ? 'active' : '' }}" href="/lihat"><i class='bx bxs-dashboard'></i> Dashboard</a>
+          </li>
+
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <i class='bx bx-dock-left'></i> Fitur
             </a>
             <ul class="dropdown-menu" id="dropdownmenu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/browsing"><i class='bx bx-globe'></i> Browsing</a></li>
+              <li><a class="dropdown-item" href="/tesbrowsing"><i class='bx bx-globe'></i> Browsing</a></li>
               <li><a class="dropdown-item" href="/searching"><i class='bx bx-search-alt'></i> Searching</a></li>
-              <li><a class="dropdown-item" href="https://bit.ly/PuraKahyanganJagat"> <i class='bx bxs-file-blank'></i> Questionaire</a></li>
             </ul>
           </li>
           </ul>

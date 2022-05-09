@@ -48,7 +48,7 @@
   </section><!--end silde-->
   
   <section id="cerita">
-    <div class="container-fluid mb-2" style="background-color: #E5E5E5">
+    <div class="container-fluid" style="background-color: #E5E5E5">
       <div class="row text-center">
         <div class="col my-4 ">
           <h2>Pengertian Pura</h2>
@@ -56,8 +56,8 @@
       </div>
       <div class="container">
           <div class="card mb-3" style="align-items: center;">
-            <img src="assets/img/pura luhur batukaru.jpg" class="card-img-top mt-1" style="height: 230px; max-width: 90%;" alt="pura">
-            <div class="container mt-4" style="width: 95%; text-align: justify" >
+            <img src="assets/img/pura luhur batukaru.jpg" class="card-img-top mt-1" style="height: 25rem; max-width: 90%;" alt="pura" data-aos="fade-in" data-aos-duration="2000">
+            <div class="container mt-4" style="width: 95%; text-align: justify" data-aos="fade-down" data-aos-duration="2000">
              
               <p>
                 Dalam Kamus Besar Bahasa Indonesia terbitan Balai Pustaka, kata “Pura” mempunyai tiga arti: <br> 1. pundi-pundi dari kain (tempat uang), <br> 2. kota/ negeri dan, <br> 3. tempat beribadat (bersembahyang) umat Hindu Dharma. <br> Pada mulanya pura di Bali bukanlah untuk menyatakan tempat suci yang digunakan sebagai tempat pemujaan terhadap Tuhan, Dewa, Ida Bhatara, atau Leluhur. Istilah pura berasal dari bahasa Sansekerta yang artinya tempat yang dikelilingi tembok. Kalau ada pasar yang dikelilingi tembok, bisa disebut pura. Tempat kediaman raja, patih dan hulubalang yang dikelilingi tembok juga bisa disebut pura. Kata pura masuk ke Indonesia sejalan dengan pengaruh Hindu, yang kemudian meresap ke dalam bahasa Jawa Kuno.
@@ -91,7 +91,7 @@
           </div>
         
       </div>
-      </div>
+
       <section id="tekan" style="margin-top: 3rem" >
         <div class="tombol">
           <div class="col ">
@@ -99,7 +99,10 @@
           </div>
         </div>
       </section>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffff" fill-opacity="1" d="M0,224L48,234.7C96,245,192,267,288,272C384,277,480,267,576,240C672,213,768,171,864,154.7C960,139,1056,149,1152,149.3C1248,149,1344,139,1392,133.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+      </div>
+     
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#E5E5E5" fill-opacity="1" d="M0,192L24,176C48,160,96,128,144,117.3C192,107,240,117,288,117.3C336,117,384,107,432,90.7C480,75,528,53,576,64C624,75,672,117,720,138.7C768,160,816,160,864,154.7C912,149,960,139,1008,128C1056,117,1104,107,1152,101.3C1200,96,1248,96,1296,101.3C1344,107,1392,117,1416,122.7L1440,128L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"></path></svg>
+    
   </section><!--end cerita-->
     
 

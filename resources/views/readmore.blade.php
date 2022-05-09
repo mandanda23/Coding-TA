@@ -59,6 +59,13 @@
       <div class="container" style="text-align: justify">
         {!! $dtl['Pengertian']!!}
       </div>
+
+      <div class="container mt-2 mb-3 text-bold" >
+        <h2><strong>
+            <a href="/detailpura/{{ str_replace(' ', '_', $dtl['nama']) }}">Lihat Detail {{ $dtl['nama'] }}</a></strong>
+        </h2>
+      </div>
+
     </section>
    </div>
     
@@ -71,8 +78,9 @@
         </div>
       </div>
     </section>
+   
   </div>
-  <a href="/detailpura/{{ str_replace(' ', '_', $dtl['nama']) }}">
+  <a href="javascript:history.back()">
   <div class="btn shadow-sm mb-2 bg-body rounded">
    
       <h5 style="color: black"> <i class='bx bx-arrow-back'></i>  Back</h5>

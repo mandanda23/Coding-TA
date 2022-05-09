@@ -73,42 +73,42 @@
     </div>
     <!-- end nav-->
 
-    <section class="home-section" >
+    <section class="home-section" style=" height: auto;">
         <div class="home-content">
             <i class='bx bx-menu'></i>
-            <a class="con ms-2" href="/browsing">
+            <a class="con ms-2" href="/tesbrowsing">
                 <i class='bx bx-globe'></i>
                 <span class="text border-0">Browsing</span>
             </a>
         </div>
-        <main>      
-                <div class="container-fluid">
-                        <div calss='mt-3 ms-2 me-2'>                                                            
-                            @foreach ($isi['kabupaten'] as $item)                                                                                         
-                                    <div class="col-lg-3 mb-3">
-                                        <div class="card" style="max-width: fit-content;">
-                                            <div class="card-body">
-                                                <h3 class="card-title" style="text-align: center">
-                                                    {{ str_replace('_', ' ', $item['kabupaten']) }}
-                                                </h3>
-                                                <div class="row">
-                                                    <div class="col">
-                                                        {{-- <h6>Kecamatan :{{ $item[0]->totalkecamatan }}</h6> --}}
-                                                        {{-- <h6>Desa : {{ $item[0]->totalDesas }}</h6>
-                                                        <h6>Banjar : {{ $item[0]->totalbanjar }}</h6> --}}
-                                                        <a href="/{{ $isi['link'] }}/{{ str_replace(' ', '_', $item['kabupaten']) }}"
-                                                            class="btn btn-primary">lebih lanjut </a>
-            
-                                                    </div>
-                                                </div>
-                                            </div>
+        <main>
+
+            <div class="row mt-3 ms-2 me-2">
+              <?php $i = 0;?>
+                 @foreach ($isi['kabupaten'] as $item)                 
+                        <div class="col-lg-3 mb-3" style="width: auto">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h2 class="card-title" style="text-align: center">{{ $i+1 }}.
+                                      {{ str_replace('_', ' ', $item['kabupaten']) }}
+                                    </h2>
+                                    <div class="row">
+                                        <div class="col">                                           
+                                            {{-- <h6>Desa : {{ $item[0]->totalDesas }}</h6>
+                                            <h6>Banjar : {{ $item[0]->totalbanjar }}</h6> --}}
+                                            <a href="/{{ $isi['link'] }}/{{ str_replace(' ', '_', $item['kabupaten']) }}"
+                                            class="btn btn-primary">lebih lanjut </a>
+
                                         </div>
                                     </div>
-                                               
-                             @endforeach
+                                </div>
+                            </div>
                         </div>
-                </div>
-           
+                        <?php $i++;?>
+                @endforeach
+             
+            </div>
+            
 
         </main>
 

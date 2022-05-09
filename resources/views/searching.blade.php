@@ -32,23 +32,23 @@
 
       <li>
         <div class="iocn-link">
-          <a href="/browsing">
+          <a href="/tesbrowsing">
             <i class='bx bx-globe'></i>
             <span class="link_name">Browsing</span>
           </a>
         </div>
         <ul class="sub-menu">
-          <li><a class="link_name" href="/browsing">Browsing</a></li>
+          <li><a class="link_name" href="/tesbrowsing">Browsing</a></li>
         </ul>
       </li>
          
       <li>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdyHonyTQgrTX9yuY1nKaOpzKnSWuAjKnWYsLLL1OIrh_by_w/formResponse">
           <i class='bx bxs-file-blank'></i>
-          <span class="link_name">Questionaire</span>
+          <span class="link_name">Tugas</span>
         </a>
         <ul class="sub-menu blank">
-          <li><a class="link_name" href="https://bit.ly/PuraKahyanganJagat">Questionaire</a></li>
+          <li><a class="link_name" href="https://bit.ly/PuraKahyanganJagat">Tugas</a></li>
         </ul>
       </li>
 
@@ -93,6 +93,21 @@
             </div>
           <div class="container-fluid">
             <div class="row">
+
+              <div class="col">
+                <h5>
+                  Status Pura
+                </h5>
+                <div class="input-group mb-3">
+                  <select class="form-select" id="inputGroupSelect01" name="cari_kondisi">
+                    <option value="">Pilih...</option>
+                  @foreach($data['kondisi'] as $item)
+                    <option value="{{ $item['kondisi'] }}">{{ str_replace('_',' ',str_replace('_',' ',$item['kondisi'])) }}</option>
+                  @endforeach
+                  </select>
+                </div>
+              </div>
+
                 <div class="col">
                   <h5>
                     Kabupaten
@@ -147,6 +162,20 @@
                     </select>
                   </div>
                 </div>
+                <div class="col">
+                  <h5>
+                    Pelinggih
+                  </h5>
+                  <div class="input-group mb-3">
+                    <select class="form-select" id="inputGroupSelect01" name="cari_pelinggih">
+                      <option value="">Pilih...</option>
+                    @foreach($data['pelinggih'] as $item)
+                      <option value="{{ $item['pelinggih'] }}">{{ str_replace('_',' ',str_replace('_',' ',$item['pelinggih'])) }}</option>
+                    @endforeach
+                    </select>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
@@ -183,8 +212,20 @@
                   <tr>
                     <th scope="row">{{ $i+1 }}</th>
                     <td>
-                      <a style="color: rgba(0, 0, 0, 0.844)" href="/detailpura/{{ str_replace(' ', '_', $item['nama']) }}">{{ str_replace('_',' ',$item['nama'] )}}
-                      </a>
+
+                      <div class="col-lg-3 mb-3" style="width: auto">
+                        <div class="card">
+                          {{-- <img src="{{ asset('/assets/img/pura/'.$item['cover'])}}" class="card-img-top" alt="Foto Pura" width="100%" height="225"> --}}
+                          <div class="card-body">
+                            <h4 class="card-title">{{ str_replace('_', ' ', $item['nama']) }}</h4>
+                      
+                           
+                            <a href="/readmore/{{ str_replace(' ', '_', $item['nama']) }}" class="btn btn-primary">Lihat Detail Pura</a>
+                            
+                          </div>
+                        </div>
+                      </div>
+
                     </td>
                   </tr>
                   <?php $i++;?>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\tesbrowsing;
 use App\Http\Controllers\browsing;
 use App\Http\Controllers\detailpura;
 use App\Http\Controllers\lihat;
@@ -25,20 +26,21 @@ Route::get('/', function () {
 
 
 Route::get('/about', function () {
-    return view('about', [
-        "title" => "About",
-        "nama" => "acintia udayana",
-        "email" => "udayana@gmail.com",
-        "gambar" => "1.jpg"
-    ]);
+    return view('about', ["title" => "About",]);
 });
+Route::get('/tesbrowsing', [tesbrowsing::class, 'isi']);
+Route::get('/tesbrowsingKabupaten/{kabupaten}', [tesbrowsing::class, 'isiKabupaten']);
+Route::get('/tesbrowsingKecamatan/{kecamatan}', [tesbrowsing::class, 'isiKecamatan']);
+Route::get('/tesbrowsingDesa/{desa}', [tesbrowsing::class, 'isiDesa']);
+Route::get('/tesbrowsingBanjar/{banjar}', [tesbrowsing::class, 'isiBanjar']);
+
 
 Route::get('/detailpura/{nama_pura}', [detailpura::class, 'read']);
-Route::get('/browsing', [browsing::class, 'isi']);
 Route::get('/searching', [SearchingController::class, 'index']);
 Route::get('/readmore/{nama_pura}', [readmore::class, 'detail']);
 Route::get('/lihat', [lihat::class, 'lihat']);
 
+Route::get('/browsing', [browsing::class, 'isi']);
 Route::get('/browsingKabupaten/{kabupaten}', [browsing::class, 'isiKabupaten']);
 Route::get('/browsingKecamatan/{kecamatan}', [browsing::class, 'isiKecamatan']);
 Route::get('/browsingDesa/{desa}', [browsing::class, 'isiDesa']);

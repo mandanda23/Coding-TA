@@ -85,10 +85,8 @@
                         </div>
                         <section>
 
-                            <div class="container mb-3">
-                                <h3>Berikut Merupakan Sekilas mengenai {{ $dtl['nama'] }}
-                                    <a href="/readmore/{{ str_replace(' ', '_', $dtl['nama']) }}">"Baca Sejarah"</a>
-                                </h3>
+                            <div class="container" style="text-align: justify">
+                                {!! $dtl['Pengertian']!!}
                             </div>
 
 
@@ -193,7 +191,7 @@
                         </div>
                      </div>
                     <div class="btn shadow-sm mb-2 bg-body rounded">
-                        <a href="/lihat">
+                        <a href="javascript:history.back()">
                           <h5 style="color: black"> <i class='bx bx-arrow-back'></i>  Back</h5>
                         </a>
                     </div>
